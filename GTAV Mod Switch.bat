@@ -4,6 +4,19 @@
 ;;;===,,,del /s /q "%~dp0ps.ps1" >NUL 2>&1
 ;;;===,,,pause
 $loc = Read-Host -Prompt "Enter GTA V installation path "
+
+if ((test-path $loc\dinput8.dll) -or (test-path $loc\OpenIV.asi)){
+	Write-Host @'
+
+     Warning: Mods are Currently ENABLED. 
+'@`n
+} else {
+	Write-Host @'
+	
+	Mods are Currently DISABLED/Not installed.
+'@`n
+}
+
 $ch = Read-Host -Prompt "[d] - Disable Mods `n[e] - Enable Mods`n " 
 if ($ch -eq 'd'){
      Write-Host @'
