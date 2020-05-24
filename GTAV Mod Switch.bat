@@ -5,7 +5,7 @@
 ;;;===,,,pause
 $loc = Read-Host -Prompt "Enter GTA V installation path "
 
-if ((test-path $loc\dinput8.dll) -or (test-path $loc\OpenIV.asi)){
+if ((test-path $loc\dinput8.dll) -or (test-path $loc\OpenIV.asi) -or (test-path $loc\ScriptHookV.dll)){
 	Write-Host @'
 
      Warning: Mods are Currently ENABLED. 
@@ -27,6 +27,7 @@ if ($ch -eq 'd'){
 
 	move $loc\dinput8.dll $loc\asi_backups\dinput8.dll.bak >$null 2>&1
 	move $loc\OpenIV.asi $loc\asi_backups\OpenIV.asi.bak >$null 2>&1
+	move $loc\ScriptHookV.dll $loc\asi_backups\ScriptHookV.dll >$null 2>&1
 	
 	rm $loc\dinput8.dll >$null 2>&1
 	rm $loc\OpenIV.asi >$null 2>&1
@@ -40,6 +41,7 @@ if ($ch -eq 'e'){
 	
 	move $loc\asi_backups\dinput8.dll.bak  $loc\dinput8.dll >$null 2>&1
 	move $loc\asi_backups\OpenIV.asi.bak  $loc\OpenIV.asi >$null 2>&1
+	move $loc\asi_backups\ScriptHookV.dll $loc\ScriptHookV.dll >$null 2>&1
 
 	rm $loc\asi_backups\dinput8.dll.bak >$null 2>&1
 	rm $loc\asi_backups\OpenIV.asi.bak >$null 2>&1
