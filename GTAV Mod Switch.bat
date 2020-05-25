@@ -17,7 +17,7 @@ if ((test-path $loc\dinput8.dll) -or (test-path $loc\OpenIV.asi) -or (test-path 
 '@`n
 }
 
-$ch = Read-Host -Prompt "[d] - Disable Mods `n[e] - Enable Mods`n " 
+$ch = Read-Host -Prompt "[e] - Enable Mods And Offline Mode`n[d] - Disable Mods for Online Mode `n " 
 if ($ch -eq 'd'){
      Write-Host @'
      Disabling Mods...
@@ -28,11 +28,8 @@ if ($ch -eq 'd'){
 	move $loc\dinput8.dll $loc\asi_backups\dinput8.dll.bak >$null 2>&1
 	move $loc\OpenIV.asi $loc\asi_backups\OpenIV.asi.bak >$null 2>&1
 	move $loc\ScriptHookV.dll $loc\asi_backups\ScriptHookV.dll.bak >$null 2>&1
-	
-	rm $loc\dinput8.dll >$null 2>&1
-	rm $loc\OpenIV.asi >$null 2>&1
-	rm $loc\OpenIV.log >$null 2>&1
-	rm $loc\asiloader.log >$null 2>&1
+	rm $loc\commandline.txt >$null 2>&1
+
 }
 if ($ch -eq 'e'){
 	  Write-Host @'
@@ -42,12 +39,12 @@ if ($ch -eq 'e'){
 	move $loc\asi_backups\dinput8.dll.bak  $loc\dinput8.dll >$null 2>&1
 	move $loc\asi_backups\OpenIV.asi.bak  $loc\OpenIV.asi >$null 2>&1
 	move $loc\asi_backups\ScriptHookV.dll.bak $loc\ScriptHookV.dll >$null 2>&1
+	New-Item $loc\commandline.txt >$null 2>&1
+	Set-Content $loc\commandline.txt '-scofflineonly'
 
-	rm $loc\asi_backups\dinput8.dll.bak >$null 2>&1
-	rm $loc\asi_backups\OpenIV.asi.bak >$null 2>&1
 } else{
      Write-Host @'
-Exiting...
+     No changes made. Exiting...
 '@`n
      exit
 }
