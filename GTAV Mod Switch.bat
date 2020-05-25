@@ -31,7 +31,7 @@ if ($ch -eq 'd'){
 	rm $loc\commandline.txt >$null 2>&1
 
 }
-if ($ch -eq 'e'){
+elseif ($ch -eq 'e'){
 	  Write-Host @'
      Enabling Mods...
 '@`n
