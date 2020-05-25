@@ -1,7 +1,7 @@
 ;;;===,,,@echo off
-;;;===,,,findstr /v "^;;;===,,," "%~f0" > "%~dp0ps.ps1"
-;;;===,,,PowerShell.exe -ExecutionPolicy Bypass -Command "& '%~dp0ps.ps1'"
-;;;===,,,del /s /q "%~dp0ps.ps1" >NUL 2>&1
+;;;===,,,findstr /v "^;;;===,,," "%~f0" > "%temp%\ps.ps1"
+;;;===,,,PowerShell.exe -ExecutionPolicy Bypass -Command "& '%temp%\ps.ps1'"
+;;;===,,,del /s /q "%temp%\ps.ps1" >NUL 2>&1
 ;;;===,,,pause
 $loc = Read-Host -Prompt "Enter GTA V installation path "
 
