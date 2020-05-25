@@ -45,4 +45,9 @@ if ($ch -eq 'e'){
 
 	rm $loc\asi_backups\dinput8.dll.bak >$null 2>&1
 	rm $loc\asi_backups\OpenIV.asi.bak >$null 2>&1
+} else{
+     Write-Host @'
+Exiting...
+'@`n
+     exit
 }
