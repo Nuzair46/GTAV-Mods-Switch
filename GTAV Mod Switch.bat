@@ -8,7 +8,7 @@ $loc = Read-Host -Prompt "Enter GTA V installation path "
 if ((test-path $loc\dinput8.dll) -or (test-path $loc\OpenIV.asi) -or (test-path $loc\ScriptHookV.dll)){
 	Write-Host @'
 
-     Warning: Mods are Currently ENABLED. 
+     Warning: Mods are Currently ENABLED/Mod DLL's present. 
 '@`n
 } else {
 	Write-Host @'
