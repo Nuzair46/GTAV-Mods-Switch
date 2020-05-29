@@ -5,7 +5,7 @@ A simple Mod Enabler/Disabler for GTAV OpenIV
 You don't have to go open OpenIV and wait everytime to disable/enable mods in GTAV. This script does the same + more much faster.
 Initially you'll need OpenIV to install asiloader and OpenIV plugins.
 
-**IMPORTANT** : This doesn't disable the ENB as some of you might like it for online too. Rockstar WON'T ban you for ENB, So disable it when ingame with the ENB menu. 
+**IMPORTANT** : This doesn't work with FiveM. 
 
 When Mods are enabled:  
 > commandline.txt with "-scofflineonly" is created so that the the only launcher offline, preventing any accidental access to online mode. 
