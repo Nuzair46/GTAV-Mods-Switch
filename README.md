@@ -11,7 +11,7 @@ When Mods are enabled:
 > commandline.txt with "-scofflineonly" is created so that the the only launcher offline, preventing any accidental access to online mode. 
 >  
 When Mods are disabled:   
-> asiloader and openiv plugins are backed up in a folder and deleted from the GTAV dir.   
+> asiloader,ENB,Menyoo trainer(if you have it), ScripthookV and openiv plugins are backed up in a folder and deleted from the GTAV dir.   
 > Also the above created commandline.txt file is removed.  
 
 #### Installation / How to run?
